@@ -1,0 +1,177 @@
+body {
+    margin: 0 auto 0 auto;
+
+        header {
+            grid-area: header;
+	    position: sticky;
+	    top: 0;
+            background-color: DarkSlateBlue;
+	    opacity: 1.0;
+    	    padding: 25px 0;
+   	    border: solid 5px white;
+   	    text-align: center;
+    	    color: WhiteSmoke;
+	    font-style: italic;
+	    font-variant: small-caps;
+	    font-weight: bold;
+   	    font-family: "American Typewriter", Didot, serif;
+    	    font-size: 300%;
+        }
+
+        nav {
+            grid-area: nav;
+	    
+	    ul {
+		position: fixed;
+      		background-color: DarkSalmon;
+	    	opacity: 1.0;
+    	    	border: solid 5px white;
+   	    	list-style-type: none;
+  		margin: 0;
+  		padding: 0;
+  		overflow: hidden;
+	    }
+
+	   li {
+  		float: center;
+		display: inline-block;
+	    }
+
+	   li a {
+  		display: block;
+  		text-align: center;
+    	    	background-color: SkyBlue;
+	     	color: DarkOrchid;
+	    	font-style: italic;
+	    	font-variant: small-caps;
+	    	font-weight: bold;
+   	    	font-family: "American Typewriter", Didot, serif;
+    	    	font-size: 200%;
+  		padding: 14px 16px;
+  		text-decoration: none;
+	    }
+
+	   li a:hover {
+ 	        background-color: DarkSalmon;
+	    }
+		
+	 }
+     }
+
+        main {
+            grid-area: main;
+            background-color: DarkSeaGreen;
+	    opacity: 1.0;
+    	    padding: 30px;
+   	    padding-top: 80px;
+	    padding-right: 550px;
+	    border: solid 5px white;
+   	    text-align: left;
+            color: ForestGreen;
+    	    font-style: normal;
+	    font-variant: normal;
+	    font-weight: normal;
+   	    font-family: Didot, Bookman, serif;
+    	    font-size: 150%;
+        }
+
+        aside {
+            grid-area: aside;
+	    float: right;
+            background-color: DarkSalmon;
+	    width: 514px;
+	    margin: auto;
+	    opacity: 1.0;
+    	    padding: 25px 0;
+	    border: solid 5px white;
+    	    text-align: center;
+    	    color: DarkOrchid;
+	    font-style: italic;
+	    font-variant: small-caps;
+	    font-weight: bold;
+   	    font-family: "American Typewriter", Didot, serif;
+    	    font-size: 150%;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: DarkSlateBlue;
+	    margin: auto;
+	    opacity: 1.0;
+    	    padding: 25px;
+   	    border: solid 5px white;
+   	    text-align: center;
+    	    color: WhiteSmoke;
+	    font-style: italic;
+	    font-variant: small-caps;
+	    font-weight: bold;
+   	    font-family: "American Typewriter", Didot, serif;
+    	    font-size: 150%;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'header header header header header header'
+                'nav nav main main main aside'
+                'nav nav main main main aside'
+                'nav nav footer footer footer footer';
+            grid-gap: .5em;
+           
+        }
+
+
+        ul li {
+            list-style-type: none;
+        }
+
+
+        /*FIRST BREAK POINT === tablet */
+        @media only screen and (max-width : 900px) {
+            body {
+                background: blue;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    'nav nav nav nav nav nav'
+                    'header header header header header header'
+                    'main main main main aside aside'
+                    'footer footer footer footer footer footer';
+                grid-gap: .5em;
+                padding: .5em;
+            }
+
+            ul li {
+                display: inline-block;
+            }
+
+        }
+
+        /*SECOND BREAK POINT === mobile */
+        @media only screen and (max-width : 600px) {
+
+            body {
+                background: fuchsia;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    'nav nav nav nav nav nav'
+                    'header header header header header header'
+                    'main main main main main main'
+                    'aside aside aside aside aside aside'
+                    'footer footer footer footer footer footer';
+                grid-gap: .5em;
+                padding: .5em;
+            }
+
+            ul li {
+                display: inline-block;
+            }
+
+        }
+
+}
